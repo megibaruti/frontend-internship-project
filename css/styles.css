@@ -1183,6 +1183,17 @@ body {
     }
 }
 
+.bg-icon {
+    background-image: url('../assets/about-us-rectangle.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 45px;
+ }
+
 .new-products-title {
     font-size: 30px;
     color: #40c8f4;
