@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new Glide('.glide-new-products', { 
       type: 'carousel',
       perView: 4,
-      focusAt:'center',
+      focusAt:'0',
       breakpoints: {
           1024: { perView: 2 },
       }
@@ -49,3 +49,24 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
   });
 });
+
+function openTabs(evt, contentName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("products");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", function() {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active")); 
+        this.classList.add("active"); 
+    });
+});
+
+  document.getElementById(contentName).style.display = "grid";
+
+  evt.currentTarget.classList.add("active");
+}
+

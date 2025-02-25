@@ -28,12 +28,12 @@ body {
         height: 180px;
         background: linear-gradient(to right, #4facfe, #42CCF6);
         display: flex;
+        justify-content: center;
         position: relative;
     }
 
     .navbar {
-        width: 100%;
-        padding: 0px 30px;
+        width: 85%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -83,11 +83,9 @@ body {
         align-items: center;
         background: white;
         clip-path: polygon(98.415% 100%, 1.951% 100%, 1.951% 100%, 1.655% 99.554%, 1.379% 98.271%, 1.125% 96.239%, .9% 93.543%, .706% 90.268%, .549% 86.5%, .432% 82.325%, .36% 77.829%, .336% 73.096%, .367% 68.214%, .959% 16.429%, .959% 16.429%, 1.003% 13.669%, 1.069% 11.086%, 1.155% 8.706%, 1.26% 6.557%, 1.38% 4.665%, 1.514% 3.057%, 1.661% 1.76%, 1.818% .8%, 1.984% .204%, 2.156% 0%, 98.21% 0%, 98.21% 0%, 98.382% .2%, 98.548% .783%, 98.705% 1.726%, 98.852% 3.006%, 98.987% 4.598%, 99.107% 6.48%, 99.211% 8.628%, 99.297% 11.017%, 99.363% 13.625%, 99.407% 16.429%, 100% 68.214%, 100% 68.214%, 100.03% 73.096%, 100.007% 77.829%, 99.935% 82.325%, 99.818% 86.5%, 99.66% 90.268%, 99.467% 93.543%, 99.241% 96.239%, 98.988% 98.271%, 98.711% 99.554%, 98.415% 100%);
-        padding: 5px 10px;
-        width: 55%;
+        width: 100%;
         color: #4facfe;
         overflow: hidden;
-        margin-left: 150px;
         padding-left: 20px;
     }
 
@@ -153,7 +151,7 @@ body {
         color: white;
         border: none;
         clip-path: polygon(100% 31.786%, 97.914% 83.571%, 97.914% 83.571%, 97.759% 86.331%, 97.527% 88.914%, 97.224% 91.294%, 96.857% 93.443%, 96.434% 95.335%, 95.961% 96.943%, 95.444% 98.24%, 94.891% 99.2%, 94.308% 99.796%, 93.703% 100%, 7.587% 100%, 7.587% 100%, 6.982% 99.796%, 6.399% 99.2%, 5.846% 98.24%, 5.329% 96.943%, 4.856% 95.335%, 4.432% 93.443%, 4.066% 91.294%, 3.763% 88.914%, 3.531% 86.331%, 3.376% 83.571%, 1.29% 31.786%, 1.29% 31.786%, 1.184% 26.904%, 1.265% 22.171%, 1.519% 17.675%, 1.931% 13.5%, 2.485% 9.732%, 3.166% 6.457%, 3.96% 3.761%, 4.852% 1.729%, 5.825% .446%, 6.866% 0%, 94.423% 0%, 94.423% 0%, 95.464% .446%, 96.438% 1.729%, 97.33% 3.761%, 98.124% 6.457%, 98.805% 9.732%, 99.359% 13.5%, 99.771% 17.675%, 100.025% 22.171%, 100.106% 26.904%, 100% 31.786%);
-        height: 46px;
+        height: 35px;
         color: #fff;
         font-size: 12px;
         font-style: normal;
@@ -324,11 +322,21 @@ body {
 }
 
 
+.glide1 {
+    overflow: visible !important;
+}
+
 .glide1 .glide__arrows {
+
+    position: absolute;
+    bottom: -20px;
+    /* Moves the arrow buttons down to be half outside */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centers them horizontally */
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
+    z-index: 10;
 }
 
 .glide1 {
@@ -402,7 +410,7 @@ body {
         background-color: #6bd9fd;
     }
 
-    .tab.active {
+    .tab button.active {
         background-color: #40c8f4;
     }
 
@@ -460,8 +468,15 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
     clip-path: polygon(100% 100%, .261% 100%, .261% 100%, .96% 99.87%, 1.541% 99.468%, 2.021% 98.778%, 2.414% 97.784%, 2.736% 96.469%, 3.002% 94.816%, 3.227% 92.809%, 3.427% 90.432%, 3.616% 87.668%, 3.81% 84.5%, 3.81% 84.5%, 3.978% 81.338%, 4.204% 76.678%, 4.478% 70.785%, 4.789% 63.924%, 5.127% 56.359%, 5.48% 48.356%, 5.839% 40.179%, 6.191% 32.092%, 6.527% 24.361%, 6.836% 17.25%, 6.836% 17.25%, 7.021% 14.367%, 7.324% 11.664%, 7.734% 9.169%, 8.241% 6.912%, 8.835% 4.922%, 9.504% 3.228%, 10.24% 1.86%, 11.031% .846%, 11.867% .216%, 12.738% 0%, 87.523% 0%, 87.523% 0%, 88.404% .216%, 89.246% .846%, 90.039% 1.86%, 90.776% 3.228%, 91.446% 4.922%, 92.039% 6.912%, 92.547% 9.169%, 92.96% 11.664%, 93.268% 14.367%, 93.463% 17.25%, 93.463% 17.25%, 93.761% 24.361%, 94.089% 32.092%, 94.435% 40.179%, 94.789% 48.356%, 95.139% 56.359%, 95.475% 63.924%, 95.785% 70.785%, 96.058% 76.678%, 96.284% 81.338%, 96.451% 84.5%, 96.451% 84.5%, 96.645% 87.668%, 96.835% 90.432%, 97.034% 92.809%, 97.259% 94.816%, 97.525% 96.469%, 97.847% 97.784%, 98.24% 98.778%, 98.72% 99.468%, 99.302% 99.87%, 100% 100%);
-    min-width: 180px;
+    min-width: 200px;
     height: 60px;
+    transform: scale(1);
+}
+
+@media screen and (min-width: 1800px) {
+    .tab {
+        min-width: 250px;
+    }
 
 }
 
@@ -470,6 +485,7 @@ body {
     color: white;
     transform-origin: center bottom;
     font-size: 15px;
+    height: 65px;
 }
 
 .tab:hover {
@@ -487,6 +503,55 @@ body {
     border-bottom-right-radius: 80px;
     gap: 20px;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
+    display: none;
+}
+
+#All {
+    display: grid;
+}
+
+.products::before,
+.products::after {
+    z-index: 1;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.products::before {
+    background-image: url('../assets/blog-bg-shape.png');
+    background-position: left;
+    width: 60%;
+    height: 80%;
+    top: 13%;
+    right: 48%;
+}
+
+.products::after {
+    background-image: url('../assets/blog-bg-shape.png');
+    width: 16%;
+    height: 38%;
+    bottom: 24%;
+    left: 93%;
+}
+
+.the-latest.products::before {
+    background-image: url('../assets/the-latest-shape.png');
+    width: 60%;
+    height: 53%;
+    top: 25%;
+    right: 43%;
+}
+
+.the-latest.products::after {
+    background-image: url('../assets/the-latest-shape2.png');
+    width: 44%;
+    height: 75%;
+    bottom: 11%;
+    left: 77%;
 }
 
 .product {
@@ -499,6 +564,7 @@ body {
     font-size: 10px;
     width: 100%;
     transition: transform 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .product:hover {
@@ -545,8 +611,6 @@ body {
         padding: 10px;
     }
 
-    .product {}
-
     .product-info {
         padding: 0;
         padding-left: 5px;
@@ -572,11 +636,9 @@ body {
 
 @media screen and (max-width: 1251px) {
 
-
     .tabs-container {
         justify-content: flex-start;
     }
-
 }
 
 .game-container {
@@ -588,9 +650,15 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .game-container {
+        border-top-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+    }
 }
 
 .game-container::before,
@@ -697,7 +765,6 @@ body {
     }
 }
 
-
 /* 
   .shadow {
     position: absolute;
@@ -716,7 +783,6 @@ body {
     align-items: center;
     max-width: 30%;
     gap: 5px;
-
 }
 
 .game-info h3 {
@@ -780,8 +846,6 @@ body {
         gap: 20px;
     }
 
-    .game-image img {}
-
     .game-info {
         max-width: 90%;
     }
@@ -804,7 +868,7 @@ body {
     border-radius: 20px;
     height: fit-content;
     position: relative;
-    width: 80%;
+    margin: 0 45px;
 }
 
 .subscription-container::before,
@@ -830,19 +894,16 @@ body {
     width: 16%;
     height: 32%;
     bottom: 6%;
-    left: 19%;
+    left: 27%;
 }
-
-
 
 .subscription-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 15px;
+    padding-left: 47px;
     padding-bottom: 10px;
     color: white;
-    width: 50%;
+    max-width: 600px;
     position: relative;
     z-index: 2;
 }
@@ -852,8 +913,9 @@ body {
     align-items: center;
     background: white;
     clip-path: polygon(98.415% 100%, 1.951% 100%, 1.951% 100%, 1.655% 99.554%, 1.379% 98.271%, 1.125% 96.239%, .9% 93.543%, .706% 90.268%, .549% 86.5%, .432% 82.325%, .36% 77.829%, .336% 73.096%, .367% 68.214%, .959% 16.429%, .959% 16.429%, 1.003% 13.669%, 1.069% 11.086%, 1.155% 8.706%, 1.26% 6.557%, 1.38% 4.665%, 1.514% 3.057%, 1.661% 1.76%, 1.818% .8%, 1.984% .204%, 2.156% 0%, 98.21% 0%, 98.21% 0%, 98.382% .2%, 98.548% .783%, 98.705% 1.726%, 98.852% 3.006%, 98.987% 4.598%, 99.107% 6.48%, 99.211% 8.628%, 99.297% 11.017%, 99.363% 13.625%, 99.407% 16.429%, 100% 68.214%, 100% 68.214%, 100.03% 73.096%, 100.007% 77.829%, 99.935% 82.325%, 99.818% 86.5%, 99.66% 90.268%, 99.467% 93.543%, 99.241% 96.239%, 98.988% 98.271%, 98.711% 99.554%, 98.415% 100%);
-    padding: 5px 10px;
+    padding: 0 20px;
     width: 80%;
+    height: 50px;
 }
 
 .email-input input {
@@ -861,23 +923,37 @@ body {
     outline: none;
     width: 100%;
     padding: 8px;
-    font-size: 14px;
-    color: #4facfe;
+    font-size: 16px;
+}
+
+.input-placeholder::placeholder {
+    color: #40c8f4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .email-input i {
     color: #f2409c;
+    font-size: 20px;
 }
 
 .subscription-btn {
     clip-path: polygon(100% 31.786%, 97.914% 83.571%, 97.914% 83.571%, 97.759% 86.331%, 97.527% 88.914%, 97.224% 91.294%, 96.857% 93.443%, 96.434% 95.335%, 95.961% 96.943%, 95.444% 98.24%, 94.891% 99.2%, 94.308% 99.796%, 93.703% 100%, 7.587% 100%, 7.587% 100%, 6.982% 99.796%, 6.399% 99.2%, 5.846% 98.24%, 5.329% 96.943%, 4.856% 95.335%, 4.432% 93.443%, 4.066% 91.294%, 3.763% 88.914%, 3.531% 86.331%, 3.376% 83.571%, 1.29% 31.786%, 1.29% 31.786%, 1.184% 26.904%, 1.265% 22.171%, 1.519% 17.675%, 1.931% 13.5%, 2.485% 9.732%, 3.166% 6.457%, 3.96% 3.761%, 4.852% 1.729%, 5.825% .446%, 6.866% 0%, 94.423% 0%, 94.423% 0%, 95.464% .446%, 96.438% 1.729%, 97.33% 3.761%, 98.124% 6.457%, 98.805% 9.732%, 99.359% 13.5%, 99.771% 17.675%, 100.025% 22.171%, 100.106% 26.904%, 100% 31.786%);
-    background: #4facfe;
+    background: #40c8f4;
     color: white;
     font-size: 18px;
-    padding: 10px 60px;
+    padding: 0px 20px;
     border: none;
     margin-top: 15px;
     text-transform: capitalize;
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .subscription-image {
@@ -900,7 +976,6 @@ body {
         max-width: 100% !important;
         justify-content: center;
         flex-direction: column-reverse;
-
     }
 
     .subscription-container::before {
@@ -926,7 +1001,6 @@ body {
 
     .buttons-mobile {
         display: flex;
-        align-self: center;
         flex-direction: column;
         align-content: center;
         align-items: center;
@@ -938,10 +1012,6 @@ body {
         font-weight: 500;
         line-height: 20px;
         text-align: left;
-    }
-
-    .subscribe-btn {
-        width: 85%;
     }
 }
 
@@ -1061,7 +1131,11 @@ body {
     }
 }
 
-.glide-featured {}
+.glide-featured {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+}
 
 .glide-featured .glide__slide {
     width: 300px;
@@ -1085,7 +1159,6 @@ body {
         margin: 0 !important;
     }
 }
-    
 
 .glide-featured .glide__slide img {
     width: 100%;
@@ -1094,11 +1167,23 @@ body {
 }
 
 .glide-featured .glide__arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .glide-featured .glide__arrows {
+        display: none;
+    }
+
+    .glide-featured {
+        max-width: 100%;
+    }
 }
 
 .glide-featured .glide__arrow {
@@ -1113,14 +1198,19 @@ body {
     align-items: center;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    pointer-events: auto;
 }
 
 .glide-featured .glide__arrow--left {
     background-color: #f8a7c2;
+    position: absolute;
+    left: -50px;
 }
 
 .glide-featured .glide__arrow--right {
     background-color: #ff5cab;
+    position: absolute;
+    right: -50px;
 }
 
 .glide-featured .glide__arrow:hover {
@@ -1185,14 +1275,46 @@ body {
 
 .bg-icon {
     background-image: url('../assets/about-us-rectangle.png');
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 26px 45px;
- }
+}
+
+.new-products-section {
+    position: relative;
+    z-index: 2;
+    margin: 100px 0;
+    overflow: hidden;
+}
+
+.new-products-section::before,
+.new-products-section::after {
+    z-index: 1;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.new-products-section::before {
+    background-image: url('../assets/new-products-shape.png');
+    width: 72%;
+    height: 100%;
+    top: 0%;
+    left: -6%;
+}
+
+.new-products-section::after {
+    background-image: url('../assets/new-products-shape2.png');
+    width: 20%;
+    height: 90%;
+    bottom: 8%;
+    right: -3%;
+}
 
 .new-products-title {
     font-size: 30px;
@@ -1220,7 +1342,6 @@ body {
     width: 90%;
     height: 90%;
     justify-self: center;
-    transition: transfrom 0.3s ease-in-out;
 }
 
 .new-products-card:hover {
@@ -1270,13 +1391,31 @@ body {
     font-weight: 600;
 }
 
+.glide-new-products {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    margin: 0 auto;
+}
 
 .glide-new-products .glide__arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .glide-new-products .glide__arrows {
+        display: none;
+    }
+
+    .glide-new-products {
+        max-width: 100%;
+    }
 }
 
 .glide-new-products .glide__arrow {
@@ -1291,14 +1430,19 @@ body {
     align-items: center;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    pointer-events: auto;
 }
 
 .glide-new-products .glide__arrow--left {
     background-color: #f8a7c2;
+    position: absolute;
+    left: -50px;
 }
 
 .glide-new-products .glide__arrow--right {
     background-color: #ff5cab;
+    position: absolute;
+    right: -50px;
 }
 
 .glide-new-products .glide__arrow:hover {
@@ -1313,7 +1457,7 @@ body {
     max-height: 730px;
     max-width: 100%;
     z-index: 2;
-    padding: 20px 20px 0;
+    padding: 20px 40px 0;
     border-top-left-radius: 150px;
     border-bottom-right-radius: 120px;
     overflow: hidden;
@@ -1364,18 +1508,18 @@ body {
     left: 34%;
 }
 
-/* 
+
 .blog-shape {
     background: url('../assets/blog-shape3.png');
-        background-size: cover;
+    background-size: cover;
     position: absolute;
     width: 30%;
     height: 25%;
-    top: 15%;
+    top: 28%;
     right: -28%;
     transform: translate(-50%, -50%);
     z-index: 1;
-} */
+}
 
 .blog-left {
     position: relative;
@@ -1658,6 +1802,10 @@ body {
     width: 70%;
 }
 
+.social-icons {
+    margin-top: 34px;
+}
+
 .social-icons i {
     font-size: 20px;
     color: white;
@@ -1675,7 +1823,7 @@ body {
 
 .newsletter h3 {
     font-size: 26px;
-    padding: 0;
+    margin-top: 0;
 }
 
 .subscribe-btn {
@@ -1683,11 +1831,17 @@ body {
     background: #ff4f98;
     color: white;
     font-size: 18px;
-    padding: 10px 60px;
     border: none;
     cursor: pointer;
     transition: 0.3s;
     margin-top: 20px;
+    text-transform: capitalize;
+    width: 60%;
+    max-width: 330px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 .subscribe-btn:hover {
@@ -1733,6 +1887,14 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+    }
+
+    .email-input {
+        width: 87%;
     }
 
     .footer-bottom-content {
