@@ -70,3 +70,23 @@ function openTabs(evt, contentName) {
   evt.currentTarget.classList.add("active");
 }
 
+function openLatestTabs(evt, contentName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("products");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", function() {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active")); 
+        this.classList.add("active"); 
+    });
+});
+
+  document.getElementById(contentName).style.display = "grid";
+
+  evt.currentTarget.classList.add("active");
+}
+

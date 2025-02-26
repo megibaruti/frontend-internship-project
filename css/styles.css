@@ -84,7 +84,7 @@ body {
         background: white;
         clip-path: polygon(98.415% 100%, 1.951% 100%, 1.951% 100%, 1.655% 99.554%, 1.379% 98.271%, 1.125% 96.239%, .9% 93.543%, .706% 90.268%, .549% 86.5%, .432% 82.325%, .36% 77.829%, .336% 73.096%, .367% 68.214%, .959% 16.429%, .959% 16.429%, 1.003% 13.669%, 1.069% 11.086%, 1.155% 8.706%, 1.26% 6.557%, 1.38% 4.665%, 1.514% 3.057%, 1.661% 1.76%, 1.818% .8%, 1.984% .204%, 2.156% 0%, 98.21% 0%, 98.21% 0%, 98.382% .2%, 98.548% .783%, 98.705% 1.726%, 98.852% 3.006%, 98.987% 4.598%, 99.107% 6.48%, 99.211% 8.628%, 99.297% 11.017%, 99.363% 13.625%, 99.407% 16.429%, 100% 68.214%, 100% 68.214%, 100.03% 73.096%, 100.007% 77.829%, 99.935% 82.325%, 99.818% 86.5%, 99.66% 90.268%, 99.467% 93.543%, 99.241% 96.239%, 98.988% 98.271%, 98.711% 99.554%, 98.415% 100%);
         width: 100%;
-        color: #4facfe;
+        color: #40c8f4;
         overflow: hidden;
         padding-left: 20px;
     }
@@ -95,7 +95,14 @@ body {
         width: 100%;
         padding: 8px;
         font-size: 14px;
-        color: #4facfe;
+    }
+
+    .search-placeholder::placeholder {
+        color: #40c8f4;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
     }
 
     .icons {
@@ -175,6 +182,8 @@ body {
         flex-direction: column;
         gap: 20px;
         width: 100%;
+        align-items: center;
+        overflow: hidden;
     }
 
     .top-bar {
@@ -182,7 +191,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        padding: 10px 0;
+        width: 100%;
     }
 
     .top-bar-link {
@@ -198,7 +208,7 @@ body {
 
     .navbar {
         display: flex;
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
         align-items: center;
     }
@@ -240,8 +250,8 @@ body {
         clip-path: polygon(98.415% 100%, 1.951% 100%, 1.951% 100%, 1.655% 99.554%, 1.379% 98.271%, 1.125% 96.239%, .9% 93.543%, .706% 90.268%, .549% 86.5%, .432% 82.325%, .36% 77.829%, .336% 73.096%, .367% 68.214%, .959% 16.429%, .959% 16.429%, 1.003% 13.669%, 1.069% 11.086%, 1.155% 8.706%, 1.26% 6.557%, 1.38% 4.665%, 1.514% 3.057%, 1.661% 1.76%, 1.818% .8%, 1.984% .204%, 2.156% 0%, 98.21% 0%, 98.21% 0%, 98.382% .2%, 98.548% .783%, 98.705% 1.726%, 98.852% 3.006%, 98.987% 4.598%, 99.107% 6.48%, 99.211% 8.628%, 99.297% 11.017%, 99.363% 13.625%, 99.407% 16.429%, 100% 68.214%, 100% 68.214%, 100.03% 73.096%, 100.007% 77.829%, 99.935% 82.325%, 99.818% 86.5%, 99.66% 90.268%, 99.467% 93.543%, 99.241% 96.239%, 98.988% 98.271%, 98.711% 99.554%, 98.415% 100%);
         padding: 5px 15px;
         margin: 10px auto;
-        width: 90%;
-        color: #4facfe;
+        width: 80%;
+        color: #40c8f4;
         overflow: hidden;
     }
 
@@ -250,7 +260,14 @@ body {
         outline: none;
         margin-left: 8px;
         font-size: 14px;
-        color: #4facfe;
+    }
+
+    .search-placeholder::placeholder {
+        color: #40c8f4;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
     }
 
     .mobile-menu {
@@ -330,10 +347,8 @@ body {
 
     position: absolute;
     bottom: -20px;
-    /* Moves the arrow buttons down to be half outside */
     left: 50%;
     transform: translateX(-50%);
-    /* Centers them horizontally */
     display: flex;
     gap: 10px;
     z-index: 10;
@@ -407,10 +422,10 @@ body {
     }
 
     .tab {
-        background-color: #6bd9fd;
+        background-color: #b3f6ff;
     }
 
-    .tab button.active {
+    .tab.active {
         background-color: #40c8f4;
     }
 
@@ -477,7 +492,6 @@ body {
     .tab {
         min-width: 250px;
     }
-
 }
 
 .tab.active {
@@ -491,6 +505,17 @@ body {
 .tab:hover {
     background-color: #ff85c2;
     color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .tab {
+        min-width: 174px;
+        height: 50px;
+    }
+
+    .tab.active {
+        height: 57px;
+    }
 }
 
 .products {
@@ -509,6 +534,10 @@ body {
 }
 
 #All {
+    display: grid;
+}
+
+#latest-all {
     display: grid;
 }
 
@@ -603,7 +632,7 @@ body {
 
 @media screen and (max-width: 990px) {
     .products {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(2, 1fr);
         position: relative;
         margin-top: -20px;
@@ -635,7 +664,6 @@ body {
 }
 
 @media screen and (max-width: 1251px) {
-
     .tabs-container {
         justify-content: flex-start;
     }

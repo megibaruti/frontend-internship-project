@@ -25,7 +25,7 @@
                 <div class="right-icons">
                     <div class="search-container">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Find kids videos">
+                        <input type="text" class="search-placeholder" placeholder="Find kids videos">
                     </div>
                     <div class="icons">
                         <i class="fa-solid fa-user"></i>
@@ -72,7 +72,7 @@
 
         <div class="search-container">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Find kids videos">
+            <input type="text" class="search-placeholder" placeholder="Find kids videos">
         </div>
 
         <nav class="mobile-menu" id="mobile-menu">
@@ -129,7 +129,7 @@
                     <button class="tab" onclick="openTabs(event, 'Curriculum')">CURRICULUM</button>
                 </div>
 
-                <div class="products" id="All">
+                <div class="products active" id="All">
                     <div class="product">
                         <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
                         <div class="product-info">
@@ -639,16 +639,16 @@
 
             <div class="best-sellers">
                 <div class="tabs-container">
-                    <button class="tab" onclick="openTabs(event, 'All')">ALL PRODUCTS</button>
-                    <button class="tab" onclick="openTabs(event, 'Games')">GAMES</button>
-                    <button class="tab" onclick="openTabs(event, 'Kids')">KIDS VIDEOS</button>
-                    <button class="tab" onclick="openTabs(event, 'Countdowns')">COUNTDOWNS</button>
-                    <button class="tab" onclick="openTabs(event, 'Motions')">MOTIONS</button>
-                    <button class="tab" onclick="openTabs(event, 'Backgrounds')">STILL BACKGROUNDS</button>
-                    <button class="tab" onclick="openTabs(event, 'Curriculum')">CURRICULUM</button>
+                    <button class="tab active" onclick="openLatesTabs(click, 'latest-all')">ALL PRODUCTS</button>
+                    <button class="tab" onclick="openLatestTabs(click, 'latest-games')">GAMES</button>
+                    <button class="tab" onclick="openLatestTabs(event, 'latest-kids')">KIDS VIDEOS</button>
+                    <button class="tab" onclick="openLatestTabs(event, 'latest-countdowns')">COUNTDOWNS</button>
+                    <button class="tab" onclick="openLatestTabs(event, 'latest-motions')">MOTIONS</button>
+                    <button class="tab" onclick="openLatestTabs(event, 'latest-backgrounds')">STILL BACKGROUNDS</button>
+                    <button class="tab" onclick="openLatestTabs(event, 'latest-curriculum')">CURRICULUM</button>
                 </div>
 
-                <div class="products the-latest" id="All">
+                <div class="products the-latest" id="latest-all">
                     <div class="product">
                         <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
                         <div class="product-info">
@@ -672,6 +672,364 @@
                     </div>
                     <div class="product">
                         <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/under-the-sea.png" alt="Under the Sea">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/construction-zone.png" alt="Construction Zone">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-thanksgiving.png" alt="Kids Thanksgiving">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-worship.png" alt="Kids Worship">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products the-latest" id="latest-games">
+                    <div class="product">
+                        <img src="assets/kids-worship.png" alt="Kids Worship">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/play-the-game.png" alt="Play the Game">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/school-bus.png" alt="School Bus">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/under-the-sea.png" alt="Under the Sea">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/construction-zone.png" alt="Construction Zone">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-thanksgiving.png" alt="Kids Thanksgiving">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products the-latest" id="latest-kids">
+                    <div class="product">
+                        <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/play-the-game.png" alt="Play the Game">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/school-bus.png" alt="School Bus">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/under-the-sea.png" alt="Under the Sea">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/construction-zone.png" alt="Construction Zone">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-thanksgiving.png" alt="Kids Thanksgiving">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-worship.png" alt="Kids Worship">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products the-latest" id="latest-countdowns">
+                    <div class="product">
+                        <img src="assets/play-the-game.png" alt="Play the Game">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/school-bus.png" alt="School Bus">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/under-the-sea.png" alt="Under the Sea">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/construction-zone.png" alt="Construction Zone">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-thanksgiving.png" alt="Kids Thanksgiving">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-worship.png" alt="Kids Worship">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products the-latest" id="latest-motions">
+                    <div class="product">
+                        <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/play-the-game.png" alt="Play the Game">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/school-bus.png" alt="School Bus">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/under-the-sea.png" alt="Under the Sea">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/construction-zone.png" alt="Construction Zone">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-thanksgiving.png" alt="Kids Thanksgiving">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-worship.png" alt="Kids Worship">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products the-latest" id="latest-backgrounds">
+                    <div class="product">
+                        <img src="assets/construction-zone.png" alt="Construction Zone">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/under-the-sea.png" alt="Under the Sea">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/school-bus.png" alt="School Bus">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/play-the-game.png" alt="Play the Game">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-thanksgiving.png" alt="Kids Thanksgiving">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/kids-worship.png" alt="Kids Worship">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products the-latest" id="latest-curriculum">
+
+                    <div class="product">
+                        <img src="assets/play-the-game.png" alt="Play the Game">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="assets/pumpkin-prayers.png" alt="Pumpkin Prayers">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product">
+                        <img src="assets/gone-fishing.png" alt="Gone Fishing">
+                        <div class="product-info">
+                            <h3>Match It! Back To School Edition</h3>
+                            <p>Children's Ministry Deals</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="assets/school-bus.png" alt="School Bus">
                         <div class="product-info">
                             <h3>Match It! Back To School Edition</h3>
                             <p>Children's Ministry Deals</p>
