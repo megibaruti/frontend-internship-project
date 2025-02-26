@@ -295,6 +295,7 @@ body {
 .glide-wrapper {
     background: url('../assets/Background1.png');
     padding-top: 40px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,15 +339,13 @@ body {
     }
 }
 
-
 .glide1 {
     overflow: visible !important;
 }
 
 .glide1 .glide__arrows {
-
     position: absolute;
-    bottom: -20px;
+    bottom: -43px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -382,8 +381,8 @@ body {
 }
 
 .glide1 .glide__arrow {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: none;
     font-size: 24px;
     color: white;
@@ -393,6 +392,7 @@ body {
     align-items: center;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    position: relative;
 }
 
 .glide1 .glide__arrow--left {

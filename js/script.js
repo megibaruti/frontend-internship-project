@@ -51,19 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function openTabs(evt, contentName) {
-  var i, tabcontent, tablinks;
+  var container = evt.currentTarget.closest(".best-sellers-container"); 
+  var tabcontent = container.getElementsByClassName("products");
 
-  tabcontent = document.getElementsByClassName("products");
-  for (i = 0; i < tabcontent.length; i++) {
+  for (var i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  document.querySelectorAll(".tab").forEach(tab => {
-    tab.addEventListener("click", function() {
-        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active")); 
-        this.classList.add("active"); 
-    });
-});
+  container.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
 
   document.getElementById(contentName).style.display = "grid";
 
@@ -71,22 +66,16 @@ function openTabs(evt, contentName) {
 }
 
 function openLatestTabs(evt, contentName) {
-  var i, tabcontent, tablinks;
+  var container = evt.currentTarget.closest(".the-latest");
+  var tabcontent = container.getElementsByClassName("products");
 
-  tabcontent = document.getElementsByClassName("products");
-  for (i = 0; i < tabcontent.length; i++) {
+  for (var i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  document.querySelectorAll(".tab").forEach(tab => {
-    tab.addEventListener("click", function() {
-        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active")); 
-        this.classList.add("active"); 
-    });
-});
+  container.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
 
   document.getElementById(contentName).style.display = "grid";
 
   evt.currentTarget.classList.add("active");
 }
-
