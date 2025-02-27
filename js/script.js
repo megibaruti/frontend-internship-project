@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new Glide('.glide-about-us', { 
       type: 'carousel',
       perView: 4,
+      autoplay: 2000,
       focusAt:'center',
       breakpoints: {
         1024: {perView: 3},
