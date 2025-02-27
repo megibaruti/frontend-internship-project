@@ -9,14 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     new Glide('.glide-featured', { 
         type: 'carousel',
         perView: 5,
-        focusAt:'center',
+        focusAt: 'center',
         breakpoints: {
             1200: { perView: 3 },
-            768: { perView: 3 }
         }
     }).mount();
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
   new Glide('.glide-about-us', { 
@@ -24,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
       perView: 4,
       focusAt:'center',
       breakpoints: {
-        1024: {perView: 2},
-          640: { perView: 1.5 }
+        1024: {perView: 3},
+        640: { perView: 1.5 }
       }
   }).mount();
 });
@@ -34,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
   new Glide('.glide-new-products', { 
       type: 'carousel',
       perView: 4,
-      focusAt:'0',
+      autoplay: 2000,
       breakpoints: {
-          1024: { perView: 2 },
+          1024: { perView: 2.2 },
       }
   }).mount();
 });
